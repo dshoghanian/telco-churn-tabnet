@@ -26,8 +26,8 @@
     ```
     telco-churn-tabnet/
 ├─ notebooks/
-│  ├─ TabNet.ipynb               (if provided)
-│  ├─ telco_churn_tabnet_analysis.ipynb  (if provided)
+│  ├─ TabNet.ipynb
+│  ├─ telco_churn_tabnet_analysis.ipynb
 │  └─ README.md
 ├─ src/
 │  ├─ __init__.py
