@@ -80,14 +80,11 @@
     python -m src.model_tabnet --train data/processed/train.csv --val data/processed/val.csv --target Churn
     ```
 
-    ## Results (fill these in for your portfolio)
-    - Accuracy: `...`
+## Results
 
-    - ROC AUC: `...`
-
-    - Confusion matrix: `...`
-
-    - Feature importance (TabNet masks): `...`
+- **Accuracy (TabNet, test set):** `0.78`
+- **ROC AUC (TabNet, test set):** `0.8177`
+- **Confusion matrix (TN, FP / FN, TP):**
 
 
     ## What I Learned (suggested talking points)
