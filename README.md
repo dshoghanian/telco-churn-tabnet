@@ -87,12 +87,22 @@
 - **Confusion matrix (TN, FP / FN, TP):**
 
 
-    ## What I Learned (suggested talking points)
-    - Why TabNet for tabular data and how it differs from tree‑based methods.
+    ## What I Learned
 
-    - Handling messy columns (e.g., `TotalCharges`) and class imbalance.
+- **Why TabNet for tabular data (vs. tree-based methods):**
+- TabNet uses **sequential attention** and **sparse feature masks** (“decision steps”) to focus on the most relevant columns at each step.  
+- Compared with Random Forest/XGBoost (ensembles of decision trees), TabNet gives **built-in interpretability** (mask importances) and can work well with **less hand-crafted feature engineering**.  
+- In this dataset, TabNet’s ROC AUC (`~0.818`) was slightly behind Logistic Regression (`~0.836`), but its **explanations** and sparse attention provide valuable insight for stakeholders.
 
-    - Turning exploratory notebooks into reusable modules.
+- **Handling messy columns & mild class imbalance:**
+- `TotalCharges` comes in as text with blanks; I coerced it to numeric using `pd.to_numeric(..., errors='coerce')` and dropped NAs before modeling.
+- I removed the identifier `customerID` and **one-hot encoded** categorical features with `pd.get_dummies`.
+- The dataset is **imbalanced** (~26.5% churn). I evaluated with **ROC AUC** (not just accuracy) to account for the skew; thresholds can be tuned later to meet business precision/recall trade-offs.
+
+- **Turning exploratory notebooks into reusable modules:**
+- I separated reusable steps into `src/` (e.g., `src/data_prep.py` for cleaning/splitting; `src/model_tabnet.py` as a training scaffold) and created a small script in `scripts/` to run data prep.
+- I kept heavy/raw data **git-ignored** and shipped a **100‑row sample** for quick iteration.
+- I added a **data dictionary**, **MIT license**, and **CITATION.cff** so the project is portfolio-ready and reproducible.
 
 
     ## How to Publish on GitHub
