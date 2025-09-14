@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Telco Customer Churn — TabNet (PyTorch)"
+authors:
+  - family-names: Shoghanian
+    given-names: Dante
+license: MIT
+version: 0.1.0
+date-released: 2025-09-14
+repository-code: "https://github.com/<your-username>/telco-churn-tabnet"
