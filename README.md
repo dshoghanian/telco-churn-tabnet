@@ -1,7 +1,5 @@
 # Telco Customer Churn — TabNet (PyTorch)
 
-A clean, portfolio‑ready repo showcasing a modern deep‑learning approach (TabNet) on the classic IBM Telco Customer Churn dataset. It includes notebooks, minimal source code scaffolding, and documentation to reproduce results and extend the project.
-
 ## Key Features
 - End‑to‑end flow: data prep → feature engineering → model training & evaluation (TabNet).
 - Clear, modular structure (`src/`, `notebooks/`, `data/`, `docs/`).
