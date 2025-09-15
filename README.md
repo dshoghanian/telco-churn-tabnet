@@ -1,6 +1,6 @@
 # Telco Customer Churn — Predictive Retention Analytics (Business Analytics Portfolio)
 
-**One‑line summary:** An end‑to‑end business analytics project that cleans and engineers telco customer data, builds predictive models to identify churn risk, and translates model outputs into concrete, ROI‑focused retention actions for business stakeholders.
+An end‑to‑end business analytics project that cleans and engineers telco customer data, builds predictive models to identify churn risk, and translates model outputs into concrete, ROI‑focused retention actions for business stakeholders.
 
 ---
 
@@ -49,15 +49,53 @@ Customer churn directly impacts recurring revenue. Improving retention even slig
 
 ---
 
-## Key results (fill in with your actual numbers)
-> Replace the placeholders below with your run results to make this portfolio piece shine.
+### Key Results
 
-- **ROC AUC:** `...`  
-- **PR AUC:** `...`  
-- **F1 (selected threshold):** `...`  
-- **Precision@Top 10% (or capacity‑matched):** `...`  
-- **Lift@Top 10%:** `...`  
-- **Estimated monthly revenue saved:** `...` (assumptions: average CLV = `...`, outreach capacity = `...`, offer cost = `...`)
+**Dataset size:** 7,043 customers  
+**Churned:** 1,869 customers (**26.54%**)
+
+**Tenure (months):**
+- Min: 0
+- 25th percentile: 9.00
+- Median: 29.00
+- Mean: 32.37
+- 75th percentile: 55.00
+- Max: 72
+
+**MonthlyCharges (USD):**
+- Overall — mean: 64.76, median: 70.35
+- Churned — mean: 74.44, median: 79.65
+- Retained — mean: 61.27, median: 64.43
+
+**TotalCharges (USD):**
+- Overall — mean: 2,283.30, median: 1,397.48
+- Missing `TotalCharges` values (coerced to NA): 11
+
+#### Churn by Contract Type
+| Contract       | Customers | ChurnRate_% |
+| ---            | ---       | ---         |
+| Month-to-month | 3875      | 42.71       |
+| Two year       | 1695      | 2.83        |
+| One year       | 1473      | 11.27       |
+
+#### Churn by Internet Service
+| InternetService | Customers | ChurnRate_% |
+| ---             | ---       | ---         |
+| Fiber optic     | 3096      | 41.89       |
+| DSL             | 2421      | 18.96       |
+| No              | 1526      | 7.40        |
+
+#### Churn by Payment Method
+| PaymentMethod               | Customers | ChurnRate_% |
+| ---                         | ---       | ---         |
+| Electronic check            | 2365      | 45.29       |
+| Mailed check                | 1612      | 19.11       |
+| Bank transfer (automatic)   | 1544      | 16.71       |
+| Credit card (automatic)     | 1522      | 15.24       |
+
+> Notes:  
+> - `ChurnRate_%` is the percentage of customers within each group labeled `Churn = Yes`.  
+> - `TotalCharges` is converted to numeric; non-numeric entries in the source file become missing values.
 
 **What it means for the business:** With capacity‑aware targeting and a simple retention playbook, the model can focus outreach on the most at‑risk customers and improve ROI vs. untargeted campaigns. Threshold choice is guided by treatment limits and economics (not just accuracy).
 
