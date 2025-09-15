@@ -154,8 +154,6 @@ Identify customers most likely to churn in the next period and explain **why**â€
 > - `ChurnRate_%` is the percentage of customers within each group labeled `Churn = Yes`.  
 > - `TotalCharges` is converted to numeric; nonâ€‘numeric entries in the source file become missing values.
 
-> The numbers above are computed directly from `WA_Fn-UseC_-Telco-Customer-Churn.csv` with no assumptions added.
-
 ---
 
 ## How to run
