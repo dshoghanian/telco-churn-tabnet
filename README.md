@@ -22,7 +22,6 @@ flowchart LR
 ```
 telco-churn-tabnet/
 ├─ notebooks/
-│  ├─ TabNet.ipynb
 │  ├─ telco_churn_tabnet_analysis.ipynb
 │  └─ README.md
 ├─ src/
